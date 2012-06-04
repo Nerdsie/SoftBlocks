@@ -50,8 +50,9 @@ public class SoftBlock extends JavaPlugin implements Listener, CommandExecutor{
 		if(e.getEntity() instanceof Player){
 			if(e.getCause() == DamageCause.FALL){
 				Location playerFall = e.getEntity().getLocation().subtract(0, 1, 0);
+				Location player = e.getEntity().getLocation().subtract(0, 1, 0);
 				
-				if(isSoft(playerFall.getBlock().getTypeId())){
+				if(isSoft(playerFall.getBlock().getTypeId()) || isSoft(player.getBlock().getTypeId())){
 					e.setCancelled(true);
 					e.setDamage(0);
 				}
