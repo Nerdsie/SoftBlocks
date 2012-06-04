@@ -1,0 +1,7 @@
+name: SoftBlock
+main: me.NerdsWBNerds.SoftBlock.SoftBlock
+version: 1.0
+commands:
+   sb:
+      description: Reload config.
+      usage: /sb
